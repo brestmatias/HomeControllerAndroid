@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initPressureGraph(){
         chartPressure = findViewById(R.id.chartPressure);
-        chartPressure.setNoDataText("Gato");
+        chartPressure.setNoDataText("Sin Datos Historicos");
         //chartPressure.setFitBars(true); // make the x-axis fit exactly all bars
         chartPressure.animateY(3000, Easing.EasingOption.EaseOutBack);
         chartPressure.setDrawGridBackground(false);
@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getStatusStation(){
-
+        disableInterface();
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
 
@@ -371,7 +371,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getStatusMetereologics(){
-
+        disableInterface();
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
         String url =dirStation+"sensors";
