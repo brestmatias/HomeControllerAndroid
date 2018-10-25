@@ -134,7 +134,7 @@
                 android:layout_column="0"
                 android:layout_span="2"
                 android:background="@android:color/holo_green_light"
-                android:text="Abrir" />
+                android:text="Abrir Porton" />
 
             <Button
                 android:id="@+id/buttonCloseGate"
