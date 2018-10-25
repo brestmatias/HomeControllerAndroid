@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="0dp"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TableLayout
+        android:id="@+id/tableLayoutMetereologics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:padding="0dp">
+
+
+            <TextView
+                android:id="@+id/txtTemp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:gravity="center_vertical|center_horizontal"
+                android:selectAllOnFocus="false"
+                android:textAlignment="gravity"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="20.5" />
+
+            <TextView
+                android:id="@+id/txtTempDht"
+                android:layout_height="56dp"
+                android:layout_column="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:textAlignment="gravity"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="20.5" />
+
+
+            <TextView
+                android:id="@+id/txtHum"
+                android:layout_height="56dp"
+                android:layout_column="2"
+                android:gravity="center_vertical|center_horizontal"
+                android:selectAllOnFocus="false"
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="20.5" />
+
+            <TextView
+                android:id="@+id/txtPress"
+                android:layout_height="56dp"
+                android:layout_column="3"
+                android:gravity="center_vertical|center_horizontal"
+                android:selectAllOnFocus="false"
+                android:textAlignment="gravity"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="1022.72" />
+
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:stretchColumns="*"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayoutMetereologics"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TableRow android:layout_width="match_parent">
+
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/chartPressure"
+                android:layout_height="150dp"
+                android:layout_column="0"
+                android:layout_span="3" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/chartRain"
+                android:layout_height="match_parent"
+                android:layout_column="3" />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="386dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/black"
+        android:gravity="bottom"
+        android:paddingTop="5dp"
+        android:text=""
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtView"
+        tools:layout_editor_absoluteX="3dp"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/buttonOpenGate"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_column="0"
+                android:layout_span="2"
+                android:background="@android:color/holo_green_light"
+                android:text="Abrir" />
+
+            <Button
+                android:id="@+id/buttonCloseGate"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_column="2"
+                android:layout_span="2"
+                android:background="@android:color/holo_red_light"
+                android:text="Cerrar" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <ToggleButton
+                android:id="@+id/toggleButtonS1"
+                android:layout_column="0"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:textColorLink="@android:color/holo_green_dark"
+                android:textOff="S1"
+                android:textOn="S1"
+                android:textStyle="bold" />
+
+            <ToggleButton
+                android:id="@+id/toggleButtonS2"
+                android:layout_column="1"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:textOff="S2"
+                android:textOn="S2"
+                android:textStyle="bold" />
+
+            <ToggleButton
+                android:id="@+id/toggleButtonS3"
+                android:layout_column="2"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:textOff="S3"
+                android:textOn="S3"
+                android:textStyle="bold" />
+
+            <ToggleButton
+                android:id="@+id/toggleButtonS4"
+                android:layout_column="3"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:textOff="S4"
+                android:textOn="S4"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <ToggleButton
+                android:id="@+id/toggleButtonS5"
+                android:layout_column="0"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:textOff="S5"
+                android:textOn="S5"
+                android:textStyle="bold" />
+
+            <ToggleButton
+                android:id="@+id/toggleButtonS6"
+                android:layout_column="1"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:textOff="S6"
+                android:textOn="S6"
+                android:textStyle="bold" />
+
+            <ToggleButton
+                android:id="@+id/toggleButtonS7"
+                android:layout_column="2"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:textOff="S7"
+                android:textOn="S7"
+                android:textStyle="bold" />
+
+            <ToggleButton
+                android:id="@+id/toggleButtonS8"
+                android:layout_column="3"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:textOff="S8"
+                android:textOn="S8"
+                android:textStyle="bold" />
+
+        </TableRow>
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
